@@ -1,0 +1,16 @@
+## Worker Class
+
+class Worker:
+    def __init__(self, worker_id, name):
+        self.worker_id = worker_id
+        self.name = name
+
+    def complete_task(self, task_id):
+        event = TaskCompletionEvent(task_id=task_id, worker_id=self.worker_id)
+        communication_queue.append(event)
+        print(f'Event {event.name} emitted by {self.name}!')
+
+    def request_payment(self, amount):
+        event = PaymentRequestEvent(worker_id=self.worker_id, amount=amount)
+        communication_queue.append(event)
+        print(f'Event {event.name} emitted by {self.name}!')

@@ -1,0 +1,13 @@
+## Accountant Class
+
+class Accountant:
+    def __init__(self, name):
+        self.name = name
+
+    def handle_payment_request(self):
+        current_event = communication_queue.pop(0)
+        if isinstance(current_event, PaymentRequestEvent):
+            print(f"{self.name} received payment request from Worker {current_event.worker_id} for {current_event.amount}.")
+            event = PaymentConfirmationEvent(worker_id=current_event.worker_id, amount=current_event.amount)
+            communication_queue.append(event)
+            print(f'Event {event.name} emitted by {self.name}!')

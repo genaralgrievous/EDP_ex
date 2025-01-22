@@ -1,0 +1,10 @@
+## Manager Class
+
+class Manager:
+    def __init__(self, name):
+        self.name = name
+
+    def assign_task(self, task_id, worker_id, deadline):
+        event = TaskAssignmentEvent(task_id=task_id, worker_id=worker_id, deadline=deadline)
+        communication_queue.append(event)
+        print(f'Event {event.name} emitted by {self.name}!')

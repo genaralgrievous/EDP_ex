@@ -1,0 +1,9 @@
+## Ceo Class
+class CEO:
+    def __init__(self, name):
+        self.name = name
+
+    def review_system(self):
+        print(f"{self.name} is reviewing the system state:")
+        for event in communication_queue:
+            print(f"Pending Event: {event.name}")

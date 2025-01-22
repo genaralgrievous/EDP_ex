@@ -1,0 +1,6 @@
+class PaymentConfirmationEvent(Event):
+    name = 'payment_confirmation'
+
+    def __init__(self, worker_id, amount):
+        self.worker_id = worker_id
+        self.amount = amount

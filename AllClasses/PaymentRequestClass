@@ -1,0 +1,6 @@
+class PaymentRequestEvent(Event):
+    name = 'payment_request'
+
+    def __init__(self, worker_id, amount):
+        self.worker_id = worker_id
+        self.amount = amount
