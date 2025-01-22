@@ -1,0 +1,15 @@
+## Simulating Interactions
+
+#    manager.assign_task(task_id=101, worker_id=1, deadline="2025-01-30")
+#    manager.assign_task(task_id=102, worker_id=2, deadline="2025-02-15")
+#
+#    worker1.complete_task(task_id=101)
+#    worker1.request_payment(amount=500)
+#    
+#    #worker2.complete_task(task_id=102)
+#    #worker2.request_payment(amount=700)
+
+#    accountant.handle_payment_request()
+#    accountant.handle_payment_request()
+
+#    ceo.review_system()

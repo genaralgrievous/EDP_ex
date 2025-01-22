@@ -1,0 +1,6 @@
+if __name__ == "__main__":
+    manager = Manager("Alice")
+    worker1 = Worker(1, "Bob")
+    worker2 = Worker(2, "Charlie")
+    accountant = Accountant("Diana")
+    ceo = CEO("Eve")
